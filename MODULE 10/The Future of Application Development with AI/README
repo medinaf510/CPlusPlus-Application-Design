@@ -1,0 +1,14 @@
+## Module 10: The Future of Application Development with AI
+
+### Future of My Application Plan: Student Grade Tracker (5 Years Out)
+
+Five years from now, the **Student Grade Tracker** can evolve from a manual C++ console utility into a connected, proactive academic assistant. Below is a strategic plan detailing what tasks AI should automate and where human developers must remain in control.
+
+#### 1. Three Tasks AI Could Help Automate
+* **Automated Syllabus & Assignment Extraction:** Instead of manually entering every assignment name, weight, and point total, an AI document parser could read uploaded course syllabi (PDFs or web pages) and automatically populate all upcoming assignments and grading categories into the tracker.
+* **Predictive Grade & Burnout Alerts:** AI could analyze historical grade trends, submission timing, and workload spikes across multiple classes to alert students early when their trajectory drops below their target GPA, recommending optimal study schedules before midterms or finals.
+* **Targeted Practice & Study Generation:** By identifying which specific assignments or topics have the lowest scores, integrated AI could automatically generate custom practice quizzes or flashcards tailored to those weak areas.
+
+#### 2. Two Tasks Where Human Developers Must Remain Responsible
+* **Data Privacy, Security, & Compliance:** Human developers must remain responsible for designing secure database architectures, encryption, and access controls to protect sensitive student academic records (such as complying with FERPA privacy standards), ensuring AI models never leak personal data.
+* **Core Business Logic & Grading Accuracy:** Human developers must design, test, and verify the core mathematical formulas, rounding rules, and edge-case validations that calculate official GPAs and letter grades. AI can suggest study strategies, but deterministic human-written code must guarantee 100% accurate grade calculations without hallucinations.
