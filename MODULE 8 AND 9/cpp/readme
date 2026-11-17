@@ -1,0 +1,43 @@
+# Student Grade Tracker
+
+A C++ command-line application designed to help students log assignments, calculate total grade percentages, determine letter grades, and receive AI-driven study recommendations.
+
+---
+
+## Module 8: Input Validation & Protecting Data
+
+To protect the Student Grade Tracker from crashing, entering infinite loops, or saving corrupted data (such as letters typed into number fields or negative point values), strict input validation checks were implemented across all user input workflows:
+
+* **Main Menu Selection:** When the user selects an option from the main menu (`1` through `4`), the program verifies that the input is a valid integer within that range. If a user enters a letter, symbol, or out-of-range number, `cin.clear()` and `cin.ignore()` clear the error state and flush the input buffer before prompting again.
+* **Points Earned & Points Possible:** When adding an assignment, the application ensures both point values are numeric and non-negative (`>= 0`). Additionally, **Points Possible** is validated to be strictly greater than zero (`> 0`) to prevent division-by-zero errors when calculating percentages.
+* **Assignment Names:** When entering an assignment title, the program checks that the string is not empty or composed solely of whitespace characters, ensuring every logged record has a valid name.
+
+---
+
+## Module 9: Using AI to Expand Your Application
+
+### AI-Powered Feature: Smart Grade & Study Advisor
+
+* **What the feature does:** Analyzes the student's logged assignments, calculates their overall grade percentage, identifies their lowest-scoring assignment, and generates personalized study advice along with the exact score needed on their next major assignment to reach an `A` (90%).
+* **What data it needs:** 
+  * Stored list of assignment names, points earned, and points possible.
+  * Current overall percentage and letter grade.
+  * Target grade threshold (`90%` for an `A`).
+* **What the user sees:** Users select **Option 3 (AI Study & Grade Advisor)** from the main menu. The console outputs a structured summary displaying their current grade standing, the specific assignment area that needs review, and a tailored target score goal for upcoming work.
+* **Where AI fits into the current application architecture:** 
+  In this application, the AI feature follows the Module 9 conceptual pipeline:
+
+  ```text
+  C++ Application (Student Grade Tracker)
+       |
+       +--> User Request (Selects Option 3: AI Study & Grade Advisor)
+       |
+       +--> Prepare Data (Extracts logged assignments, earned points, and total points)
+       |
+       +--> AI Service / Model (Mock AI engine analyzes lowest score & calculates target points)
+       |
+       +--> Receive Result (Generates personalized study focus & target score recommendation)
+       |
+       +--> Validate Result (Ensures assignment list is non-empty and target math is valid)
+       |
+       +--> Display to User (Outputs formatted AI Advisor report to the console)
